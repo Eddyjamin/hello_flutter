@@ -5,7 +5,7 @@
 ##  👇🏽👇🏽👇🏽Some Containers() and Text() Properties [decoraton: & style:]
 <img src ="Image/Screenshot2.png" width="300" height="500"> 
 
-##  👇🏽👇🏽👇🏽 Column's CrossAxisAlignment & MainAxisAlignment
+##  👇🏽👇🏽👇🏽 Column: CrossAxisAlignment & MainAxisAlignment
 <img src ="Image/Column.png" width="300" height="500"> 
 
 ## 👇🏽👇🏽👇🏽 Visualising Cross/Main Axis 
