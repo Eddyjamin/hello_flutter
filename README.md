@@ -2,7 +2,7 @@
  ab ovo ("The beginning")
 
 ##  👇🏽👇🏽👇🏽Card and ScrollView
-<img src ="assets/bg.jpg" width="300" height="500"> 
+<img src ="Image/card&scrollview.png" width="300" height="500"> 
  
 ##  👇🏽👇🏽👇🏽 Material Drawer and ListView
 <img src ="Image/Drawer&ListView.png" width="300" height="500"> 
