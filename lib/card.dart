@@ -7,17 +7,57 @@ main() {
   ));
 }
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
+  @override
+  _HomepageState createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
+  var MyText = "Change Caption";
+  TextEditingController _nameController = TextEditingController();
   @override // Overriden the "build" method.
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Hello Flutter2")),
+      backgroundColor: Colors.grey[300],
+      appBar: AppBar(title: Text("Hello Flutter")),
       body: Center(
-          child: Container(
-        width: 120,
-        height: 120,
-        color: Colors.teal,
-      )),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: SingleChildScrollView(
+            child: Card(
+              child: Column(
+                children: <Widget>[
+                  Image.asset("assets/bg.jpg"),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    MyText,
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: TextField(
+                      controller: _nameController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: "Enter some text",
+                        labelText: "Caption",
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
       drawer: Drawer(
         child: ListView(
           padding: const EdgeInsets.all(0), // Removes the gray top
@@ -57,29 +97,16 @@ class Homepage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.edit),
+        onPressed: () {
+          MyText = _nameController.text;
+          setState(() {});
+        },
+        child: Icon(Icons.send),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
-//Every Button in Flutter needs to implements its own onPressed() method
-// Key: Flutter uses them internally to...
-// ...differentiate between widgets by their keys
+//SizBox() is used for spacing
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Material Drawer | ListView | CirlceAvatar | NetworkImage | Floating //Action Button
-
+// Card | AssetImages | TextField | ScrollView
