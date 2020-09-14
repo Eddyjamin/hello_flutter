@@ -13,6 +13,4 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(primarySwatch: Colors.teal),
   );
 }
-//runApp(MyApp) -> extends stle -> returns Material App
-
-// Card | AssetImages | TextField | ScrollView
+//runApp(MyApp) -> extends stle -> returns Material
